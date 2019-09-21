@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #140663;
+}
+
+.thermometer-container {
+    margin-top: 16px;
+    width: 310px;
+    padding: 8px;
+    background-color: white;
+}
+
+p.result {
+    font-family: "Rock Salt";
+    font-size: 23px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+}
+
+#thermometer-top {
+    height: 250px;
+    width: 60px;
+    border-right: 8px solid #c70039;
+    border-left: 8px solid #c70039;
+    border-top: 8px solid #c70039;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #ffc30f;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: -5px 0px 0px 0px #ffc30f, 5px 0px 0px 0px #ffc30f;
+}
+
+#thermometer-bottom {
+    box-shadow: -5px 0px 0px 0px #ffc30f, 5px 0px 0px 0px #ffc30f;
+    content: '';
+    background-color: #ff5723;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffc30f' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 8px solid #c70039;
+    z-index: -1;
+    margin: -16px auto;
+}
+
+#thermometer-fill {
+    width: 100%;
+    min-height: 37px;
+    background-color: #ff5723;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffc30f' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    position: absolute;
+    bottom: -8px;
+    transition: all .2s;
+}
+
+.left .percent {
+    text-align: right;
+}
+
+.right .percent {
+    text-align: left;
+}
+
+.dark {
+    background-color: #581845;
+}
+
+.light {
+    background-color: #c70039;
+}
+
+.selected {
+    box-shadow: 0 0 1em #FFD800;
+}
+
+.percent {
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    font-style: bold;
+    z-index: 33;
+    margin: 8px;
+    width: 50px;
+}
+
+#thermometer-bottom span {
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 18px;
+    font-size: 24px;
+}
+
+form {
+    display: block;
+    margin: 2px auto;
+}
+
+label {
+    display: none;
+    margin: 0 auto;
+}
+
+.input {
+    display: block;
+    margin: 30px auto;
+}
+
+path {
+    fill: transparent;
+}
+
+text {
+    fill: #FF9800;
+}
+
+.thermometer-container {
+    font-weight: 400;
+    font-size: 38px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        overflow: hidden;
+        width: 80px;
+        -webkit-appearance: none;
+        background-color: #c70039;
+    }
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #c70039;
+        margin-top: -1px;
+    }
+    input[type='range']::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: ew-resize;
+        background: #434343;
+        box-shadow: -80px 0 0 80px #FF9800;
+    }
+}
+
+@media (min-width: 600px) {
+    p.result {
+        font-size: 32px;
+    }
+}

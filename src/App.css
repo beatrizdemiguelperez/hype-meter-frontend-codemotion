@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+body, html {
+  width: 100vw;
+  height: 100%;
+  word-break: break-all;
+  background-color: var(--color-blue-bg);
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+}
+
+html {
+  -webkit-text-size-adjust: 100%
+}
+
+a {
+  text-decoration: none;
+}
+
+li, ol, ul {
+  list-style: none
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none
+}
+
+a {
+  color: inherit
+}
+
+input {
+  margin: 0
+}
+
+:focus {
+  outline: 0
+}
+
+del {
+  text-decoration: line-through
+}
+
+.txt-box a, .underline {
+  text-decoration: underline
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+article, aside, footer, header, main, nav, section {
+  display: block
+}
+
+label {
+  display: inline-block
+}
+
+b, strong {
+  font-weight: 500
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 1em;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+}
+
+.button-default {
+  min-width: 170px;
+  min-height: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 1px;
+}
+
+.button-default:hover {
+  background-color: var(--color-primary-disabled-safety-orange);
+  color: var(--color-white)
+}
+
+.button-submit {
+  background-color: var(--color-primary-safety-orange);
+  color: var(--color-white)
+}
+
+.button-secondary {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary-safety-orange);
+  color: var(--color-primary-safety-orange)
+}
+
+.button-submit[aria-disabled="true"] {
+  background-color: blue;
+  color: var(--color-white);
+  pointer-events: none;
+}
+
+.button-secondary[aria-disabled="true"] {
+  border-color: var(--color-primary-grey);
+  pointer-events: none;
+}
+
+.form-container {
+  background-color: white;
+}
+
+legend {
+  margin-bottom: 8px;
+}
+
+.notification {
+  position: relative !important;
+}
+
+.notification div {
+  background-color: #fcdfdf;
+  color: black;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-fields {
+  margin-top: 8px;
+  padding-left: 8px;
+  padding-right: 16px;
+}
+
+.form-fields div {
+  max-width: 300px;
+}
+
+.set-padding {
+  padding: 8px 16px;
+}
+
+.set-padding-3 {
+  padding: 24px;
+}
+
+.set-padding-6 {
+  padding: 160px;
+}
+
+.txt-align-c {
+  text-align: center;
+}
+
+html {
+  --color-primary-safety-orange: #FF7900;
+  --color-primary-disabled-safety-orange: #ffa859;
+  --color-primary-davy-dark-grey: #575756;
+  --color-primary-davy-light-grey: #E8E8E8;
+  --color-primary-davy-medium-grey: #adacac;
+  --color-secondary-fluorescent-orange: #FFC300;
+  --color-secondary-validation-color: #F9564F;
+  --color-secondary-picton-blue: #44B7EC;
+  --color-secondary-yellow-green: #8DBA2D;
+  --color-secondary-amethyst: #8D59CC;
+  --color-validation-color: #F9564F;
+  --color-white: #FFFFFF;
+  --color-input-text: #121212;
+  --color-blue-bg: #140663;
+}
+
+.icon::before, [class^='icon-']::before, [class*=' icon-']::before {
+  display: inline-block;
+  font-family: FontAwesome !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: normal;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+.App {
+  text-align: center;
+}
+
+.app-header {
+  background-color: var(--color-blue-bg);
+  height: 48px;
+}
+
+.app-header img {
+  height: 36px;
+}
+
+.orange {
+  color: #ff8906;
+}
+
+.light_red {
+  color: #e66170;
+}
+
+.light_blue {
+  color: #7BCCCA;
+}
+
+.yellow {
+  color: #EAED98;
+}
+
+.grey {
+  color: #555;
+}
+
+.pink {
+  color: #E35DDA;
+}
+
+pre.big-code {
+  font-size: 20px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+pre.small-code {
+  font-size: 10px;
+}
+
+pre {
+  visibility: visible;
+  font-family: "Press Start 2P";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.10909;
+  margin: 0 0 16px 0;
+  page-break-inside: avoid;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+
+#root {
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-main {
+  background-color: var(--color-blue-bg);
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 140px;
+  width: auto;
+  border-bottom: 1px solid var(--color-primary-davy-light-grey);
+}
+
+.header-main__content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 64px;
+  padding: 0 16px
+}
+
+.header-main img {
+  height: 36px;
+}
+
+.hipster {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.two_stars {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  left: 8px;
+  bottom: 80px;
+}
+
+.hipster img {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 600px) {
+  pre.big-code {
+    font-size: 48px;
+  }
+  pre.small-code {
+    font-size: 16px;
+  }
+  .hipster img {
+    width: 224px;
+    height: 224px;
+  }
+}
+
+.loading {
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.spinner {
+  --size: 35px;
+  animation: spin 1s linear infinite;
+  border: 4px solid #ddd;
+  border-top: 4px solid var(--color-primary-safety-orange);
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  will-change: transform;
+  margin-bottom: 16px;
+  text-align: center;
+  position: fixed;
+  top: calc(50vh - (var(--size) / 2));
+  left: calc(50vw - (var(--size) / 2));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
